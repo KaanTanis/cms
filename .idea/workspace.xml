@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="694f49a2-3930-4e14-b43b-021a2c836858" name="Default Changelist" comment="" />
+    <list default="true" id="694f49a2-3930-4e14-b43b-021a2c836858" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Anka/CategoryList.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Anka/Fields/Text.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/app/Http/Controllers/ResourceController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
@@ -126,22 +155,28 @@
       <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/anka/Fields" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kUsz5T966B4vmApBqH357YJ817" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../orchid" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\resep\cms\app\Anka" />
       <recent name="C:\Users\resep\cms\app\Anka\Fields" />
     </key>
   </component>
@@ -159,12 +194,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605766763516</updated>
-      <workItem from="1605766764604" duration="27587000" />
+      <workItem from="1605766764604" duration="29544000" />
+      <workItem from="1606130358459" duration="1043000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="2136" y="412" key="#Composer" timestamp="1605766847956">
@@ -179,14 +226,26 @@
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>
     <state x="2122" y="388" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#0/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1605857588466" />
+    <state x="2069" y="358" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1606131228678">
+      <screen x="1366" y="10" width="1920" height="1050" />
+    </state>
+    <state x="2069" y="358" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1606131228678" />
     <state x="2106" y="290" key="FileChooserDialogImpl" timestamp="1605795413012">
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>
     <state x="2106" y="290" key="FileChooserDialogImpl/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1605795413012" />
-    <state x="2160" y="454" key="NewPhpFileDialog" timestamp="1605856517845">
+    <state x="2147" y="419" key="Github.ShareDialog" timestamp="1605860234620">
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>
-    <state x="2160" y="454" key="NewPhpFileDialog/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1605856517845" />
+    <state x="2147" y="419" key="Github.ShareDialog/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1605860234620" />
+    <state x="2099" y="157" key="Github.UntrackedFilesDialog" timestamp="1605860242173">
+      <screen x="1366" y="10" width="1920" height="1050" />
+    </state>
+    <state x="2099" y="157" key="Github.UntrackedFilesDialog/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1605860242173" />
+    <state x="2160" y="454" key="NewPhpFileDialog" timestamp="1606131092647">
+      <screen x="1366" y="10" width="1920" height="1050" />
+    </state>
+    <state x="2160" y="454" key="NewPhpFileDialog/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1606131092647" />
     <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1605791255627">
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>
