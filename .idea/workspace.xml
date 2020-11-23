@@ -19,14 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="694f49a2-3930-4e14-b43b-021a2c836858" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cms.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="694f49a2-3930-4e14-b43b-021a2c836858" name="Default Changelist" comment="Update">
+      <change afterPath="$PROJECT_DIR$/app/Anka/Fields/Fields.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Anka/Fields/Text.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Anka/CategoryList.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Anka/Fields/Text.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Anka/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Anka/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ResourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ResourceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/AnkaRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AnkaRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,16 +155,18 @@
       <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
-      <path value="$PROJECT_DIR$/vendor/anka/Fields" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kUsz5T966B4vmApBqH357YJ817" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -195,8 +197,16 @@
       <option name="presentableId" value="Default" />
       <updated>1605766763516</updated>
       <workItem from="1605766764604" duration="29544000" />
-      <workItem from="1606130358459" duration="1043000" />
+      <workItem from="1606130358459" duration="6546000" />
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <created>1606131568404</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606131568404</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +222,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2136" y="412" key="#Composer" timestamp="1605766847956">
@@ -242,10 +257,18 @@
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>
     <state x="2099" y="157" key="Github.UntrackedFilesDialog/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1605860242173" />
-    <state x="2160" y="454" key="NewPhpFileDialog" timestamp="1606131092647">
+    <state x="1906" y="270" key="IDE.errors.dialog" timestamp="1606131463721">
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>
-    <state x="2160" y="454" key="NewPhpFileDialog/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1606131092647" />
+    <state x="1906" y="270" key="IDE.errors.dialog/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1606131463721" />
+    <state x="2160" y="454" key="NewPhpFileDialog" timestamp="1606131703067">
+      <screen x="1366" y="10" width="1920" height="1050" />
+    </state>
+    <state x="2160" y="454" key="NewPhpFileDialog/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1606131703067" />
+    <state x="1918" y="264" key="Vcs.Push.Dialog.v2" timestamp="1606131570812">
+      <screen x="1366" y="10" width="1920" height="1050" />
+    </state>
+    <state x="1918" y="264" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1606131570812" />
     <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1605791255627">
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>

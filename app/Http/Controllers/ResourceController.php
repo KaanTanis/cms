@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Anka\Post;
 use App\Http\Requests\AnkaRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -10,8 +11,14 @@ class ResourceController extends Controller
 {
     public function index(AnkaRequest $request)
     {
-        dd($request->fields($request->resource));
+        $fields = $request->fields($request->resource);
+        dd($fields);
+    }
 
-        User::all();
+    public function store(AnkaRequest $request)
+    {
+        // modeli bul
+        $model = '';
+        $model::create($request->all());
     }
 }

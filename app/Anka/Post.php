@@ -2,28 +2,27 @@
 namespace App\Anka;
 
 use App\Anka\Fields\Text;
+use App\Models\User;
 
 /**
  * Class Post
  * @package App\Anka
  */
 class Post {
+    public static $model = Post::class;
 
     public static $name = 'Post';
 
     public static $description = 'Post Description';
 
-    public static $table = true;
-
-    protected $placeholder;
-
     public static function fields()
     {
         return [
-            Text::make('Başlık')
-                ->placeholder('Başlık Giriniz'),
+            Text::make('Başlık', 'title')
+                ->placeholder('Başlık Giriniz')
+                ->required(),
 
-            Text::make('Açıklama')
+            Text::make('Açıklama', 'description')
         ];
     }
 

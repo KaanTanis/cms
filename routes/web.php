@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/{resource}', [ResourceController::class, 'index']);
+Route::post('/{resource}', [ResourceController::class, 'store']);

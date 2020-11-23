@@ -20,32 +20,24 @@ class AnkaRequest extends FormRequest
         ];
     }
 
-    public function name($resource)
+    public function page($resource)
     {
-        return $this->getAnkaClass($resource)::$name;
-    }
-
-    public function table($resource)
-    {
-        return $this->getAnkaClass($resource)::$table;
+        $type = $this->getAnkaClass($resource);
+        return $type::$page;
     }
 
     public function fields($resource)
     {
+        // todo: post işleminde rules ile alanları sorgula
         $type = $this->getAnkaClass($resource);
-        // todo: rules ile alanları sorgula
         return $type::fields();
     }
 
     public function getAnkaClass($resource)
     {
         $ankaPath = '\App\Anka';
-        $ankaClass = $this->strClassName($resource);
-        return $ankaPath . '\\' . $ankaClass;
-    }
+        $ankaClass = Str::ucfirst(Str::camel($resource));
 
-    public function strClassName($name)
-    {
-        return Str::ucfirst(Str::camel($name));
+        return $ankaPath . '\\' . $ankaClass;
     }
 }
