@@ -12,7 +12,10 @@ class ResourceController extends Controller
     public function index(AnkaRequest $request)
     {
         $fields = $request->fields($request->resource);
-        dd($fields);
+
+        $page = $request->page($request->resource);
+
+        return view('admin.create', compact('page', 'fields'));
     }
 
     public function store(AnkaRequest $request)

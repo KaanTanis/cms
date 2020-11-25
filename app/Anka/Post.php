@@ -1,6 +1,9 @@
 <?php
 namespace App\Anka;
 
+use App\Anka\Fields\Button;
+use App\Anka\Fields\Card;
+use App\Anka\Fields\Form;
 use App\Anka\Fields\Text;
 use App\Models\User;
 
@@ -18,11 +21,18 @@ class Post {
     public static function fields()
     {
         return [
-            Text::make('Başlık', 'title')
-                ->placeholder('Başlık Giriniz')
-                ->required(),
+            Form::make([
+                Card::make([
+                    Text::make('Başlık', 'title')
+                        ->placeholder('Lütfen başlık giriniz.'),
 
-            Text::make('Açıklama', 'description')
+                    Text::make('Açıklama', 'description')
+                        ->placeholder('Lütfen açıklama giriniz'),
+
+                    Button::make('Gönder'),
+
+                ], 'Form Bilgileri'),
+            ])
         ];
     }
 

@@ -7,7 +7,6 @@ use Illuminate\Support\Str;
 
 class AnkaRequest extends FormRequest
 {
-
     /**
      * Get the validation rules that apply to the request.
      *
@@ -23,7 +22,12 @@ class AnkaRequest extends FormRequest
     public function page($resource)
     {
         $type = $this->getAnkaClass($resource);
-        return $type::$page;
+
+        return [
+            'model' => $type::$model,
+            'name' => $type::$name,
+            'description' => $type::$description,
+        ];
     }
 
     public function fields($resource)

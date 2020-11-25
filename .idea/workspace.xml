@@ -20,13 +20,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="694f49a2-3930-4e14-b43b-021a2c836858" name="Default Changelist" comment="Update">
-      <change afterPath="$PROJECT_DIR$/app/Anka/Fields/Fields.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Anka/Fields/Text.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Anka/Fields/Button.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Anka/Fields/Card.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Anka/Fields/Form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/Components/Admin/Button.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/Components/Admin/Card.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/Components/Admin/Form.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/Components/Admin/Input.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/master.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/table.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/admin/button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/admin/card.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/admin/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/admin/input.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Anka/Fields/Fields.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Anka/Fields/Fields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Anka/Fields/Text.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Anka/Fields/Text.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Anka/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Anka/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ResourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ResourceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/AnkaRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AnkaRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +65,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/ResourceController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/app/Http/Requests/AnkaRequest.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/app/Http/Controllers/ResourceController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/app/Anka/Post.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/app/View/Components/Admin/Input.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/resources/views/admin/create.blade.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -198,6 +224,8 @@
       <updated>1605766763516</updated>
       <workItem from="1605766764604" duration="29544000" />
       <workItem from="1606130358459" duration="6546000" />
+      <workItem from="1606200373441" duration="18212000" />
+      <workItem from="1606285221035" duration="2226000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1606131568404</created>
@@ -222,6 +250,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -233,6 +262,10 @@
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>
     <state x="2136" y="412" key="#Composer/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1605766847956" />
+    <state x="2631" y="73" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606229794882">
+      <screen x="1920" y="-4" width="1920" height="1050" />
+    </state>
+    <state x="2631" y="73" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606229794882" />
     <state x="2056" y="290" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605856805348">
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>
@@ -261,17 +294,24 @@
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>
     <state x="1906" y="270" key="IDE.errors.dialog/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1606131463721" />
-    <state x="2160" y="454" key="NewPhpFileDialog" timestamp="1606131703067">
-      <screen x="1366" y="10" width="1920" height="1050" />
+    <state x="2714" y="440" key="NewPhpFileDialog" timestamp="1606286524639">
+      <screen x="1920" y="-4" width="1920" height="1050" />
     </state>
     <state x="2160" y="454" key="NewPhpFileDialog/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1606131703067" />
+    <state x="2714" y="440" key="NewPhpFileDialog/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606286524639" />
     <state x="1918" y="264" key="Vcs.Push.Dialog.v2" timestamp="1606131570812">
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>
     <state x="1918" y="264" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1606131570812" />
-    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1605791255627">
-      <screen x="1366" y="10" width="1920" height="1050" />
+    <state x="2924" y="135" width="622" height="1032" key="dock-window-1" timestamp="1606247367407">
+      <screen x="1920" y="-4" width="1920" height="1050" />
+    </state>
+    <state x="2924" y="135" width="622" height="1032" key="dock-window-1/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606247367407" />
+    <state x="2543" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1606247815701">
+      <screen x="1920" y="-4" width="1920" height="1050" />
     </state>
     <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1605791255627" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1606200605927" />
+    <state x="2543" y="223" width="672" height="678" key="search.everywhere.popup/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606247815701" />
   </component>
 </project>

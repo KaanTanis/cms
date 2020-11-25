@@ -16,6 +16,7 @@ class Fields
     public $label;
     public $required;
     public $value;
+    public $type;
 
     public function label($label)
     {
@@ -38,6 +39,12 @@ class Fields
     public function value($value)
     {
         $this->value = $value;
+        return $this;
+    }
+
+    public function type($type)
+    {
+        $this->type = $type;
         return $this;
     }
 
