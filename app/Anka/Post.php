@@ -4,7 +4,8 @@ namespace App\Anka;
 use App\Anka\Fields\Button;
 use App\Anka\Fields\Card;
 use App\Anka\Fields\Form;
-use App\Anka\Fields\Text;
+use App\Anka\Fields\Input;
+use App\Anka\Fields\Textarea;
 use App\Models\User;
 
 /**
@@ -12,7 +13,8 @@ use App\Models\User;
  * @package App\Anka
  */
 class Post {
-    public static $model = Post::class;
+
+    public static $model = \App\Models\Post::class;
 
     public static $name = 'Post';
 
@@ -21,12 +23,14 @@ class Post {
     public static function fields()
     {
         return [
+            // form ve card yer değiş
             Form::make([
                 Card::make([
-                    Text::make('Başlık', 'title')
+                    Input::make('Başlık', 'title')
                         ->placeholder('Lütfen başlık giriniz.'),
 
-                    Text::make('Açıklama', 'description')
+                    Textarea::make('Açıklama', 'description')
+                        ->rows('3')
                         ->placeholder('Lütfen açıklama giriniz'),
 
                     Button::make('Gönder'),
@@ -34,6 +38,7 @@ class Post {
                 ], 'Form Bilgileri'),
             ])
         ];
+
     }
 
 

@@ -12,7 +12,6 @@ class ResourceController extends Controller
     public function index(AnkaRequest $request)
     {
         $fields = $request->fields($request->resource);
-
         $page = $request->page($request->resource);
 
         return view('admin.create', compact('page', 'fields'));
@@ -21,7 +20,16 @@ class ResourceController extends Controller
     public function store(AnkaRequest $request)
     {
         // modeli bul
-        $model = '';
-        $model::create($request->all());
+        $page = $request->page($request->resource);
+
+        $model = $page['model'];
+        $name = $page['name'];
+
+        try {
+            $model::create($request->all());
+            return back()->withInfo(__('wasCreated', ['type' => $name]));
+        } catch (\Exception $e) {
+            return back()->withInfo($e->getMessage());
+        }
     }
 }

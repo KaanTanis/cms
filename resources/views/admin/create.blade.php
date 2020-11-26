@@ -5,6 +5,10 @@
 <div class="container px-6 mx-auto grid">
 <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">{{ $page['name'] }}</h2>
 
+@if(session()->has('info'))
+<div class="bg-purple-600 rounded px-5 py-4 text-white mb-6">{{ session('info') }}</div>
+@endif
+
 @foreach($fields as $field)
     <x-admin.form :url="$field['url']" :method="$field['method']">
         @foreach($field['form'] as $form)
@@ -15,6 +19,10 @@
                         <x-admin.input :label="$items->label" :name="$items->name" :placeholder="$items->placeholder"></x-admin.input>
                         @break
 
+                        @case('textarea-field')
+                        <x-admin.textarea :label="$items->label" :rows="$items->rows" :name="$items->name" :placeholder="$items->placeholder"></x-admin.textarea>
+                        @break
+
                         @case('button-field')
                         <x-admin.button :label="$items->label" :type="$items->type"></x-admin.button>
                         @break
@@ -22,7 +30,7 @@
 
                 @endforeach
             </x-admin.card>
-        <@endforeach
+        @endforeach
     </x-admin.form>
 @endforeach
 </div>

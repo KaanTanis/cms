@@ -42,6 +42,8 @@ class AnkaRequest extends FormRequest
         $ankaPath = '\App\Anka';
         $ankaClass = Str::ucfirst(Str::camel($resource));
 
-        return $ankaPath . '\\' . $ankaClass;
+        $path = $ankaPath . '\\' . $ankaClass;
+
+        return class_exists($path) ? $path : abort(404);
     }
 }

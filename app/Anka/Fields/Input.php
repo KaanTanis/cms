@@ -2,7 +2,7 @@
 
 namespace App\Anka\Fields;
 
-class Text extends Fields
+class Input extends Fields
 {
     public $component = 'text-field';
 }

@@ -16,5 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'admin/table');
 
+Route::get('/login', function () {
+   return 'login';
+});
+
 Route::get('/{resource}', [ResourceController::class, 'index']);
 Route::post('/{resource}', [ResourceController::class, 'store']);
