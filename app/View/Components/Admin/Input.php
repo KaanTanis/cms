@@ -9,6 +9,7 @@ class Input extends Component
     public $label;
     public $name;
     public $placeholder;
+    public $value;
 
     /**
      * Create a new component instance.
@@ -16,12 +17,14 @@ class Input extends Component
      * @param $label
      * @param $name
      * @param $placeholder
+     * @param $value
      */
-    public function __construct($label, $name, $placeholder)
+    public function __construct($label, $name, $placeholder, $value)
     {
         $this->label = $label;
         $this->name = $name;
         $this->placeholder = $placeholder;
+        $this->value = $value;
     }
 
     /**

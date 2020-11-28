@@ -20,25 +20,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="694f49a2-3930-4e14-b43b-021a2c836858" name="Default Changelist" comment="Update">
-      <change afterPath="$PROJECT_DIR$/app/Anka/Fields/Textarea.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/Components/Admin/Textarea.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_25_071042_create_posts_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/components/admin/textarea.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Anka/AboutUs.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Helpers/Helper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MediaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Sidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Language.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Option.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Translation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_27_104620_create_options_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_27_104636_create_languages_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_11_27_104915_create_translations_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Anka/Fields/Button.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Anka/Fields/Button.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Anka/Fields/Card.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Anka/Fields/Card.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Anka/Fields/Fields.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Anka/Fields/Fields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Anka/Fields/Text.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Anka/Fields/Input.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Anka/Fields/Form.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Anka/Fields/Form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Anka/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Anka/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ResourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ResourceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/AnkaRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/AnkaRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Components/Admin/Input.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Admin/Input.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Components/Admin/Textarea.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/Admin/Textarea.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/admin/button.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/admin/button.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/admin/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/admin/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/admin/input.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/admin/input.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/admin/textarea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/admin/textarea.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,11 +71,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/Http/Middleware/Sidebar.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/app/Http/Requests/AnkaRequest.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/app/Anka/AboutUs.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/app/Helpers/Helper.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/app/Http/Controllers/ResourceController.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/app/Anka/Post.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/app/View/Components/Admin/Input.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/resources/views/admin/create.blade.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -170,6 +197,7 @@
       <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kUsz5T966B4vmApBqH357YJ817" />
@@ -217,7 +245,7 @@
       <workItem from="1606285221035" duration="6951000" />
       <workItem from="1606293685404" duration="555000" />
       <workItem from="1606329087507" duration="2222000" />
-      <workItem from="1606373541496" duration="4502000" />
+      <workItem from="1606373541496" duration="34254000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1606131568404</created>
@@ -233,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606287494383</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update">
+      <created>1606399252873</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606399252873</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,18 +296,19 @@
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>
     <state x="2136" y="412" key="#Composer/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1605766847956" />
-    <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1606398891016">
+    <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1606478338570">
       <screen x="1920" y="-4" width="1920" height="1050" />
     </state>
-    <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606398891016" />
+    <state x="2685" y="237" key="#com.intellij.ide.util.MemberChooser/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606478338570" />
     <state x="2631" y="73" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606397838848">
       <screen x="1920" y="-4" width="1920" height="1050" />
     </state>
     <state x="2631" y="73" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606397838848" />
-    <state x="2056" y="290" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605856805348">
-      <screen x="1366" y="10" width="1920" height="1050" />
+    <state x="2610" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606484055030">
+      <screen x="1920" y="-4" width="1920" height="1050" />
     </state>
     <state x="2056" y="290" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1605856805348" />
+    <state x="2610" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606484055030" />
     <state x="2122" y="388" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#0" timestamp="1605857588466">
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>
@@ -298,29 +334,29 @@
       <screen x="1366" y="10" width="1920" height="1050" />
     </state>
     <state x="1906" y="270" key="IDE.errors.dialog/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1606131463721" />
-    <state x="2714" y="440" key="NewPhpFileDialog" timestamp="1606397448214">
+    <state x="2714" y="440" key="NewPhpFileDialog" timestamp="1606463152869">
       <screen x="1920" y="-4" width="1920" height="1050" />
     </state>
     <state x="2160" y="454" key="NewPhpFileDialog/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1606131703067" />
-    <state x="2714" y="440" key="NewPhpFileDialog/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606397448214" />
-    <state x="2472" y="250" key="Vcs.Push.Dialog.v2" timestamp="1606287496711">
+    <state x="2714" y="440" key="NewPhpFileDialog/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606463152869" />
+    <state x="2472" y="250" key="Vcs.Push.Dialog.v2" timestamp="1606399255424">
       <screen x="1920" y="-4" width="1920" height="1050" />
     </state>
     <state x="1918" y="264" key="Vcs.Push.Dialog.v2/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1606131570812" />
-    <state x="2472" y="250" key="Vcs.Push.Dialog.v2/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606287496711" />
+    <state x="2472" y="250" key="Vcs.Push.Dialog.v2/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606399255424" />
     <state x="2924" y="135" width="622" height="1032" key="dock-window-1" timestamp="1606247367407">
       <screen x="1920" y="-4" width="1920" height="1050" />
     </state>
     <state x="2924" y="135" width="622" height="1032" key="dock-window-1/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606247367407" />
-    <state x="2588" y="96" width="583" height="849" key="find.popup" timestamp="1606397032801">
+    <state x="2588" y="96" width="699" height="849" key="find.popup" timestamp="1606417360238">
       <screen x="1920" y="-4" width="1920" height="1050" />
     </state>
-    <state x="2588" y="96" width="583" height="849" key="find.popup/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606397032801" />
-    <state x="2543" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1606397109814">
+    <state x="2588" y="96" width="699" height="849" key="find.popup/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606417360238" />
+    <state x="2543" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1606545215138">
       <screen x="1920" y="-4" width="1920" height="1050" />
     </state>
     <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.10.1920.1050@1366.10.1920.1050" timestamp="1605791255627" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1606200605927" />
-    <state x="2543" y="223" width="672" height="678" key="search.everywhere.popup/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606397109814" />
+    <state x="2543" y="223" width="672" height="678" key="search.everywhere.popup/1920.-4.1920.1050/0.0.1920.1050@1920.-4.1920.1050" timestamp="1606545215138" />
   </component>
 </project>

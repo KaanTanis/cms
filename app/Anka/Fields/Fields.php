@@ -18,6 +18,7 @@ class Fields
     public $value;
     public $type;
     public $rows;
+    public $hideFromIndex;
 
     public function label($label)
     {
@@ -52,6 +53,12 @@ class Fields
     public function rows($rows)
     {
         $this->rows = $rows;
+        return $this;
+    }
+
+    public function hideFromIndex()
+    {
+        $this->hideFromIndex = true;
         return $this;
     }
 

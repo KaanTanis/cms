@@ -26,7 +26,9 @@ class AnkaRequest extends FormRequest
         return [
             'model' => $type::$model,
             'name' => $type::$name,
+            'nameIndex' => $type::$nameIndex,
             'description' => $type::$description,
+            'translatable' => $type::$translatable,
         ];
     }
 
@@ -39,11 +41,22 @@ class AnkaRequest extends FormRequest
 
     public function getAnkaClass($resource)
     {
-        $ankaPath = '\App\Anka';
+        $ankaPath = '\App\Anka'; // prefix
+        $newPath = null;
+        foreach (glob(app_path('/Anka/*.php')) as $item) { // get all classes
+            $ankaClass = basename($item, '.php'); // get class name
+            $path = $ankaPath . '\\' . $ankaClass; // get spesific class
+
+            $vars = get_class_vars($path); // get all vars
+            if ($resource == $vars['slug']) { // check $slug on resource
+                $newPath = $path; // create new path
+            }
+        }
+        /*$ankaPath = '\App\Anka';
         $ankaClass = Str::ucfirst(Str::camel($resource));
 
-        $path = $ankaPath . '\\' . $ankaClass;
+        $path = $ankaPath . '\\' . $ankaClass;*/
 
-        return class_exists($path) ? $path : abort(404);
+        return class_exists($newPath) ? $newPath : abort(404);
     }
 }

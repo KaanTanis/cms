@@ -1,3 +1,8 @@
 {
-    "wasCreated": "The :type was created!"
+    "edit": "Edit",
+    "deleteThis": "Delete This :type",
+    "wasCreated": "The :type was created!",
+    "wasDeleted": "The :type was deleted!",
+    "wasUpdated": "The :type was updated!",
+    "addNew": "Add New :type"
 }

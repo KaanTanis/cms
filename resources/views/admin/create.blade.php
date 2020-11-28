@@ -10,28 +10,32 @@
 @endif
 
 @foreach($fields as $field)
-    <x-admin.form :url="$field['url']" :method="$field['method']">
+{{--    Get card title--}}
+    <x-admin.card :title="$field['title']">
+{{--        Get forms--}}
         @foreach($field['form'] as $form)
-            <x-admin.card :title="$form['title']">
-                @foreach($form['card'] as $items)
-                    @switch($items->component)
+            <x-admin.form :url="$form['url']" :method="$form['method']">
+{{--                Get form fields--}}
+                @foreach($form['fields'] as $formField)
+                    @switch($formField->component)
                         @case('text-field')
-                        <x-admin.input :label="$items->label" :name="$items->name" :placeholder="$items->placeholder"></x-admin.input>
+                        <x-admin.input :label="$formField->label" :name="$formField->name" :placeholder="$formField->placeholder"
+                                       :value="old('$formField->name')"></x-admin.input>
                         @break
 
                         @case('textarea-field')
-                        <x-admin.textarea :label="$items->label" :rows="$items->rows" :name="$items->name" :placeholder="$items->placeholder"></x-admin.textarea>
+                        <x-admin.textarea :label="$formField->label" :rows="$formField->rows" :name="$formField->name" :placeholder="$formField->placeholder"
+                                          :value="old('$formField->name')"></x-admin.textarea>
                         @break
 
                         @case('button-field')
-                        <x-admin.button :label="$items->label" :type="$items->type"></x-admin.button>
+                        <x-admin.button :label="$formField->label" :type="$formField->type"></x-admin.button>
                         @break
                     @endswitch
-
                 @endforeach
-            </x-admin.card>
+            </x-admin.form>
         @endforeach
-    </x-admin.form>
+    </x-admin.card>
 @endforeach
 </div>
 

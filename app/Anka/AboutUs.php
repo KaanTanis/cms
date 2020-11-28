@@ -12,15 +12,17 @@ use App\Models\User;
  * Class Post
  * @package App\Anka
  */
-class Post {
+class AboutUs {
+
     public static $model = \App\Models\Post::class;
 
-    public static $name = 'Post';
-    public static $nameIndex = 'Posts';
-    public static $slug = 'post-bolumu';
+    public static $name = 'Hakkımızda';
 
-    // data-feather
-    public static $icon = 'home';
+    public static $nameIndex = 'Hakkımızda Bölümü';
+
+    public static $slug = 'hakkimizda-bolumu';
+
+    public static $icon = 'copy';
 
     public static $description = 'Post Description';
 

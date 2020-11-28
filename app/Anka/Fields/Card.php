@@ -4,8 +4,11 @@ namespace App\Anka\Fields;
 
 class Card {
 
-    public static function make($fields, $title = null)
+    public static function make($form, $title = null)
     {
-        return ['card' => $fields, 'title' => $title];
+        return [
+            'form' => $form,
+            'title' => $title
+        ];
     }
 }

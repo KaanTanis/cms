@@ -9,9 +9,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     />
-    <link rel="stylesheet" href="../assets/css/tailwind.output.css" />
+    <link rel="stylesheet" href="/assets/css/tailwind.output.css" />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <script src="../assets/js/init-alpine.js"></script>
+    <script src="/assets/js/init-alpine.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
@@ -24,19 +24,23 @@
         class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0"
     >
         <div class="py-4 text-gray-500 dark:text-gray-400">
-            <a
-                class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
-                href="#"
-            >
+            <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
                 {{ config('app.name') }}
             </a>
             <ul class="mt-6">
+                @foreach(request()->sidebar as $sidebar)
                 <li class="relative px-6 py-3">
-                    <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" href="../index.html">
-                        <i data-feather="home"></i>
-                        <span class="ml-4">Dashboard</span>
+                    <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                       href="{{ route('index', $sidebar['url']) }}">
+                        <i data-feather="{{ $sidebar['icon'] }}"></i>
+                        @if( request()->segment('2') == \Illuminate\Support\Str::after(route('index', $sidebar['url']), 'admin/'))
+                        <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
+                        @endif
+                        <span class="ml-4 {{ request()->segment('2') == \Illuminate\Support\Str::after(route('index', $sidebar['url']), 'admin/')
+                            ? 'text-gray-800 dark:text-gray-100' : null }}">{{ $sidebar['name'] }}</span>
                     </a>
                 </li>
+                @endforeach
             </ul>
             {{--<div class="px-6 my-6">
                 <button

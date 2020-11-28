@@ -3,10 +3,10 @@ namespace App\Anka\Fields;
 
 class Form{
 
-    public static function make($card, $url = null, $method = 'POST')
+    public static function make($fields, $url = null, $method = 'POST')
     {
         return [
-            'form' => $card,
+            'fields' => $fields,
             'url' => $url,
             'method' => $method
         ];
