@@ -1,0 +1,41 @@
+<?php
+namespace DummyNamespace;
+
+use App\Anka\Fields\Card;
+use App\Anka\Fields\Form;
+use App\Anka\Fields\Input;
+
+/**
+ * Class Post
+ * @package App\Anka
+ */
+class DummyClass {
+    public static $model = \App\Models\DummyClass::class;
+
+    public static $name = 'DummyClass';
+    public static $nameIndex = 'DummyClass';
+    public static $slug = 'DummyClass';
+
+    // data-feather icons
+    public static $icon = 'home';
+
+    public static $description = 'The page description';
+
+    public static $translatable = true;
+
+    public static $customController = false;
+    public static $withoutTable = false;
+    public static $hideFromSidebar = false;
+
+    public static function fields()
+    {
+        return [
+            Card::make([
+                Form::make([
+                    Input::make('Eg. input', 'title'),
+                ]),
+            ], 'Form'),
+        ];
+
+    }
+}

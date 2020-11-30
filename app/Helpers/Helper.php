@@ -31,6 +31,21 @@ class Helper
         return $names;
     }
 
+    public static function getAllFieldNames($fields)
+    {
+        $names = [];
+        foreach ($fields as $field) {
+            foreach ($field['form'] as $form) {
+                foreach ($form['fields'] as $formField) {
+                    if ($formField->name != null) {
+                        $names[] = $formField->name;
+                    }
+                }
+            }
+        }
+        return $names;
+    }
+
     /**
      * @param $fields
      * @return array

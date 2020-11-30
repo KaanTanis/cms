@@ -8,6 +8,9 @@ use App\Http\Requests\AnkaRequest;
 use App\Models\Translation;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
 class ResourceController extends Controller
 {
@@ -15,6 +18,10 @@ class ResourceController extends Controller
     {
         $fields = $request->fields($request->resource);
         $page = $request->page($request->resource);
+
+        if ($page['withoutTable']) {
+            return redirect()->route('edit', [$request->resource, 1]);
+        }
 
         $names = Helper::getFieldNames($fields);
         $labels = Helper::getFieldLabels($fields);
@@ -53,7 +60,7 @@ class ResourceController extends Controller
         $model = $page['model'];
         $modelTableName = app($model)->getTable();
 
-        $names = Helper::getFieldNames($fields);
+        $names = Helper::getAllFieldNames($fields);
 
         $data = [];
         foreach ($names as $name) {
@@ -67,13 +74,24 @@ class ResourceController extends Controller
 
     public function translateStore(AnkaRequest $request)
     {
+        $data = $request->all();
+
         $fields = $request->fields($request->resource);
         $page = $request->page($request->resource);
 
         $model = $page['model'];
         $modelTableName = app($model)->getTable();
-        $names = Helper::getFieldNames($fields);
-        foreach ($request->only($names) as $key => $value) {
+        $names = Helper::getAllFieldNames($fields);
+
+
+        if ($request->file()) {
+            foreach ($request->file() as $key => $value) {
+                $data[$key] = MediaController::image($value);
+            }
+        }
+        $data = Arr::only($data, $names);
+
+        foreach ($data as $key => $value) {
             Translation::updateOrCreate([
                 'table_name' => $modelTableName,
                 'foreign_id' => $request->id,
@@ -88,17 +106,26 @@ class ResourceController extends Controller
 
     public function update(AnkaRequest $request)
     {
+        $data = $request->all();
+
         $fields = $request->fields($request->resource);
         $page = $request->page($request->resource);
 
         $model = $page['model'];
 
-        $names = Helper::getFieldNames($fields);
+        $names = Helper::getAllFieldNames($fields);
+
+        if ($request->file()) {
+            foreach ($request->file() as $key => $value) {
+                $data[$key] = MediaController::image($value);
+            }
+        }
+        $data = Arr::only($data, $names);
 
         try {
             $model::find($request->id)
-                ->update($request->only($names));
-            return redirect()->route('index', $request->resource)->withInfo(__('wasUpdated', ['type' => $page['name']]));
+                ->update($data);
+            return redirect()->route('edit', [$request->resource, $request->id])->withInfo(__('wasUpdated', ['type' => $page['name']]));
         } catch (\Exception $e) {
             return back()->withInfo($e->getMessage());
         }
@@ -106,15 +133,23 @@ class ResourceController extends Controller
 
     public function store(AnkaRequest $request)
     {
+        $data = $request->all();
         $fields = $request->fields($request->resource);
         $page = $request->page($request->resource);
 
         $model = $page['model'];
 
-        $names = Helper::getFieldNames($fields);
+        $names = Helper::getAllFieldNames($fields);
+
+        if ($request->file()) {
+            foreach ($request->file() as $key => $value) {
+                $data[$key] = MediaController::image($value);
+            }
+        }
+        $data = Arr::only($data, $names);
 
         try {
-            $model::create($request->only($names));
+            $model::create($data);
             return redirect()->route('index', $request->resource)->withInfo(__('wasCreated', ['type' => $page['name']]));
         } catch (\Exception $e) {
             return back()->withInfo($e->getMessage());
@@ -123,12 +158,11 @@ class ResourceController extends Controller
 
     public function destroy(AnkaRequest $request)
     {
-        $fields = $request->fields($request->resource);
         $page = $request->page($request->resource);
 
         $model = $page['model'];
         $modelTableName = app($model)->getTable();
-        $data = $model::destroy($request->id);
+        $model::destroy($request->id);
 
         Translation::where('table_name', $modelTableName)
             ->where('foreign_id', $request->id)

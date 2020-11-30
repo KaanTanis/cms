@@ -23,7 +23,17 @@
                                        :value="old('$formField->name')"></x-admin.input>
                         @break
 
+                        @case('file-field')
+                        <x-admin.file :label="$formField->label" :name="$formField->name"
+                                       :value="old('$formField->name')"></x-admin.file>
+                        @break
+
                         @case('textarea-field')
+                        <x-admin.textarea :label="$formField->label" :rows="$formField->rows" :name="$formField->name" :placeholder="$formField->placeholder"
+                                          :value="old('$formField->name')"></x-admin.textarea>
+                        @break
+
+                        @case('tinymce-field')
                         <x-admin.textarea :label="$formField->label" :rows="$formField->rows" :name="$formField->name" :placeholder="$formField->placeholder"
                                           :value="old('$formField->name')"></x-admin.textarea>
                         @break
@@ -38,7 +48,6 @@
     </x-admin.card>
 @endforeach
 </div>
-
 </main>
 @endsection
 

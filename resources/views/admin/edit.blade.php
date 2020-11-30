@@ -8,6 +8,7 @@
                 <span style="float: left">{{ $page['name'] }}</span>
 
 
+                @if(!$page['withoutTable'])
                 <span style="float: right">
                     <form action="{{ route('destroy', [request()->resource, $data['id']]) }}" method="post">
                         @csrf
@@ -18,6 +19,7 @@
                         </button>
                     </form>
                 </span>
+                @endif
 
             </h2>
 
@@ -26,7 +28,6 @@
             @endif
 
             @if($page['translatable'] == true)
-
                 <div class="inline-block mr-4 mb-6">
                     <a href="{{ route('edit', [request()->resource, $data['id']]) }}"
                        class="{{ request()->lang != null ? 'opacity-50' : null }}
@@ -64,14 +65,25 @@
                                                    :value="old('$formField->name') ?? $data[$formField->name]"></x-admin.input>
                                     @break
 
+                                    @case('file-field')
+                                    <x-admin.file :label="$formField->label" :name="$formField->name"
+                                                  :value="old('$formField->name') ?? $data[$formField->name]"></x-admin.file>
+                                    @break
+
                                     @case('textarea-field')
                                     <x-admin.textarea :label="$formField->label" :rows="$formField->rows" :name="$formField->name" :placeholder="$formField->placeholder"
                                                       :value="old('$formField->name') ?? $data[$formField->name]"></x-admin.textarea>
                                     @break
 
-                                    @case('button-field')
-                                    <x-admin.button :label="$formField->label" :type="$formField->type"></x-admin.button>
+                                    @case('tinymce-field')
+                                    <x-admin.tinymce :label="$formField->label" :rows="$formField->rows" :name="$formField->name" :placeholder="$formField->placeholder"
+                                                      :value="old('$formField->name')"></x-admin.tinymce>
                                     @break
+
+                                    @case('button-field')
+                                    <x-admin.button :label="request()->id ? $formField->onEdit ??  $formField->label : $formField->label" :type="$formField->type"></x-admin.button>
+                                    @break
+
                                 @endswitch
                             @endforeach
                         </x-admin.form>

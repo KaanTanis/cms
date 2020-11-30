@@ -56,9 +56,9 @@ class Fields
         return $this;
     }
 
-    public function hideFromIndex()
+    public function hideFromIndex($val = true)
     {
-        $this->hideFromIndex = true;
+        $this->hideFromIndex = $val;
         return $this;
     }
 

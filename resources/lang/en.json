@@ -4,5 +4,15 @@
     "wasCreated": "The :type was created!",
     "wasDeleted": "The :type was deleted!",
     "wasUpdated": "The :type was updated!",
-    "addNew": "Add New :type"
+    "addNew": "Add New :type",
+    "loginTitle": "Login",
+    "email": "Email",
+    "password": "Password",
+    "loginBtn": "Login",
+    "authFailed": "These credentials do not match our records.",
+    "goHome": "Go Home",
+    "logout": "Log out",
+    "profileUpdated": "Profile was updated!",
+    "notEmail": "Wrong email type!",
+    "passwordMin": "The password must be minimum :min character"
 }

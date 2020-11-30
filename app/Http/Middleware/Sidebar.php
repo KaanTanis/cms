@@ -24,12 +24,26 @@ class Sidebar
             $ankaClass = basename($item, '.php');
             $path = $ankaPath . '\\' . $ankaClass;
 
-            $classes[] = [
-                'name' => $path::$nameIndex,
-                'url' => $path::$slug,
-                'icon' => $path::$icon
-            ];
+            if (!$path::$hideFromSidebar && $path::$customController == false) {
+                $classes[] = [
+                    'name' => $path::$nameIndex,
+                    'url' => $path::$slug,
+                    'icon' => $path::$icon
+                ];
+            } else {
+                if (!$path::$hideFromSidebar) {
+                    $classes[] = [
+                        'name' => $path::$nameIndex,
+                        'url' => $path::$slug,
+                        'icon' => $path::$icon,
+                        'custom_url' => true
+                    ];
+                }
+
+            }
         }
+
+
 
         $request->merge(['sidebar' => $classes]);
 
