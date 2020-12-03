@@ -46,6 +46,19 @@ class Helper
         return $names;
     }
 
+    public static function getFields($fields)
+    {
+        $arrFields = [];
+        foreach ($fields as $field) {
+            foreach ($field['form'] as $form) {
+                foreach ($form['fields'] as $formField) {
+                    $arrFields[] = $formField;
+                }
+            }
+        }
+        return $arrFields;
+    }
+
     /**
      * @param $fields
      * @return array

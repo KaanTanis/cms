@@ -16,12 +16,13 @@ class ResourceController extends Controller
 {
     public function index(AnkaRequest $request)
     {
-        $fields = $request->fields($request->resource);
         $page = $request->page($request->resource);
 
         if ($page['withoutTable']) {
             return redirect()->route('edit', [$request->resource, 1]);
         }
+
+        $fields = $request->fields($request->resource);
 
         $names = Helper::getFieldNames($fields);
         $labels = Helper::getFieldLabels($fields);
@@ -89,6 +90,16 @@ class ResourceController extends Controller
                 $data[$key] = MediaController::image($value);
             }
         }
+
+        // Slug Control
+        $fieldsAttr = Helper::getFields($fields);
+        foreach ($fieldsAttr as $item) {
+            if ($item->slug == true) {
+                $data[$item->name] = Str::slug($data[$item->name]);
+            }
+        }
+
+
         $data = Arr::only($data, $names);
 
         foreach ($data as $key => $value) {
@@ -115,11 +126,22 @@ class ResourceController extends Controller
 
         $names = Helper::getAllFieldNames($fields);
 
+        // Slug Control
+        $fieldsAttr = Helper::getFields($fields);
+        foreach ($fieldsAttr as $item) {
+            if ($item->slug == true) {
+                $data[$item->name] = Str::slug($data[$item->name]);
+            }
+        }
+
+        // File Control
         if ($request->file()) {
             foreach ($request->file() as $key => $value) {
                 $data[$key] = MediaController::image($value);
             }
         }
+
+        // Available fields
         $data = Arr::only($data, $names);
 
         try {
@@ -146,6 +168,15 @@ class ResourceController extends Controller
                 $data[$key] = MediaController::image($value);
             }
         }
+
+        // Slug Control
+        $fieldsAttr = Helper::getFields($fields);
+        foreach ($fieldsAttr as $item) {
+            if ($item->slug == true) {
+                $data[$item->name] = Str::slug($data[$item->name]);
+            }
+        }
+
         $data = Arr::only($data, $names);
 
         try {

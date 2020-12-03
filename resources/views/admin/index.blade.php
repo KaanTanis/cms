@@ -26,7 +26,7 @@
                             @foreach($labels as $label)
                             <th class="px-4 py-3">{{ $label }}</th>
                             @endforeach
-                            <th class="px-4 py-3">{{ __('edit') }}</th>
+                            <th class="px-4 py-3" style="float: right">{{ __('edit') }}</th>
                         </tr>
                         </thead>
                         <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
@@ -35,7 +35,7 @@
                             @foreach($names as $name)
                             <td class="px-4 py-3 text-sm">{{ $datum->$name }}</td>
                             @endforeach
-                            <td class="px-4 py-3 text-sm">
+                            <td class="px-4 py-3 text-sm" style="float: right">
                                 <a href="{{ route('edit', [request()->resource, $datum->id]) }}" class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colorsduration-150 bg-purple-600 border border-transparent
                                 rounded-md active:bg-purple-600hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
                                     {{ __('Edit') }}

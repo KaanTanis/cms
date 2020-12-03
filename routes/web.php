@@ -28,9 +28,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 
 Route::prefix('/admin')->middleware('auth')->group(function () {
-    Route::get('/', function () {
-        return 'dash';
-    })->name('dashboard');
+    Route::view('/', 'admin.dashboard')->name('dashboard');
 
     Route::get('/anka/{resource}', [ResourceController::class, 'index'])->name('index');
     Route::get('/anka/{resource}/create', [ResourceController::class, 'create'])->name('create');
@@ -43,16 +41,6 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
 
     Route::get('/edit-profile', [ProfileController::class, 'edit'])->name('editProfile');
     Route::post('/edit-profile', [ProfileController::class, 'update']);
-
-    Route::get('/category', [\App\Http\Controllers\CategoryController::class, 'index'])->name('getCategory');
-    Route::get('/category/create', [\App\Http\Controllers\CategoryController::class, 'create']);
-    Route::post('/category/create', [\App\Http\Controllers\CategoryController::class, 'store']);
-    Route::get('category/edit/{id}', [\App\Http\Controllers\CategoryController::class, 'edit']);
-    Route::post('category/edit/{id}', [\App\Http\Controllers\CategoryController::class, 'update']);
-    Route::get('category/edit/{id}/{lang}', [\App\Http\Controllers\CategoryController::class, 'translate']);
-    Route::post('category/edit/{id}/{lang}', [\App\Http\Controllers\CategoryController::class, 'translateStore']);
-    Route::delete('/category/delete/{id}', [\App\Http\Controllers\CategoryController::class, 'destroy']);
-
 });
 
 

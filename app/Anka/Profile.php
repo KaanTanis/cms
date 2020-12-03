@@ -25,8 +25,7 @@ class Profile {
 
     public static $translatable = false;
 
-    public static $customController = true;
-    public static $withoutTable = false;
+    public static $withoutTable = true;
     public static $hideFromSidebar = true;
 
     public static function fields()

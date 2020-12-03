@@ -5,9 +5,19 @@
 <div class="container px-6 mx-auto grid">
 <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">{{ $page['name'] }}</h2>
 
-@if(session()->has('info'))
-<div class="bg-purple-600 rounded px-5 py-4 text-white mb-6">{{ session('info') }}</div>
-@endif
+    @if(session()->has('info'))
+        @if(is_array(session('info')))
+            @foreach(session('info') as $info)
+                <div class="bg-purple-600 rounded px-5 py-4 text-white mb-6">
+                    {{ $info }}
+                </div>
+            @endforeach
+        @else
+            <div class="bg-purple-600 rounded px-5 py-4 text-white mb-6">
+                {{ session('info') }}
+            </div>
+        @endif
+    @endif
 
 @foreach($fields as $field)
 {{--    Get card title--}}

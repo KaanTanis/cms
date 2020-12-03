@@ -24,7 +24,17 @@
             </h2>
 
             @if(session()->has('info'))
-                <div class="bg-purple-600 rounded px-5 py-4 text-white mb-6">{{ session('info') }}</div>
+                @if(is_array(session('info')))
+                    @foreach(session('info') as $info)
+                        <div class="bg-purple-600 rounded px-5 py-4 text-white mb-6">
+                            {{ $info }}
+                        </div>
+                    @endforeach
+                @else
+                    <div class="bg-purple-600 rounded px-5 py-4 text-white mb-6">
+                        {{ session('info') }}
+                    </div>
+                @endif
             @endif
 
             @if($page['translatable'] == true)
@@ -61,7 +71,7 @@
                             @foreach($form['fields'] as $formField)
                                 @switch($formField->component)
                                     @case('text-field')
-                                    <x-admin.input :label="$formField->label" :name="$formField->name" :placeholder="$formField->placeholder"
+                                    <x-admin.input :disabled="request()->lang ? $formField->notTranslatable : null" :label="$formField->label" :name="$formField->name" :placeholder="$formField->placeholder"
                                                    :value="old('$formField->name') ?? $data[$formField->name]"></x-admin.input>
                                     @break
 
@@ -77,7 +87,7 @@
 
                                     @case('tinymce-field')
                                     <x-admin.tinymce :label="$formField->label" :rows="$formField->rows" :name="$formField->name" :placeholder="$formField->placeholder"
-                                                      :value="old('$formField->name')"></x-admin.tinymce>
+                                                      :value="old('$formField->name') ?? $data[$formField->name]"></x-admin.tinymce>
                                     @break
 
                                     @case('button-field')

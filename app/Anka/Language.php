@@ -25,7 +25,6 @@ class Language {
 
     public static $translatable = false;
 
-    public static $customController = false;
     public static $withoutTable = false;
     public static $hideFromSidebar = false;
 

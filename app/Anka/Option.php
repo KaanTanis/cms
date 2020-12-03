@@ -26,7 +26,6 @@ class Option {
 
     public static $translatable = true;
 
-    public static $customController = false;
     public static $withoutTable = false;
     public static $hideFromSidebar = false;
 

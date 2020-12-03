@@ -29,7 +29,6 @@ class AnkaRequest extends FormRequest
             'nameIndex' => $type::$nameIndex,
             'description' => $type::$description,
             'translatable' => $type::$translatable,
-            'customController' => $type::$customController,
             'withoutTable' => $type::$withoutTable,
             'hideFromSidebar' => $type::$hideFromSidebar,
             'slug' => $type::$slug
@@ -52,11 +51,9 @@ class AnkaRequest extends FormRequest
             $path = $ankaPath . '\\' . $ankaClass; // get spesific class
 
             $vars = get_class_vars($path); // get all vars
-//            if ($vars['customController'] == false) {
                 if ($resource == $vars['slug']) { // check $slug on resource
                     $newPath = $path; // create new path
                 }
-//            }
         }
 
         return class_exists($newPath) ? $newPath : abort(404);

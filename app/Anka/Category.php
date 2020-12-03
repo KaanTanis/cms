@@ -24,8 +24,7 @@ class Category {
 
     public static $translatable = true;
 
-    public static $customController = true;
-    public static $withoutTable = true;
+    public static $withoutTable = false;
     public static $hideFromSidebar = false;
 
     public static function fields()

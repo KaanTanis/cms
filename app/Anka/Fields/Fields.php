@@ -19,6 +19,20 @@ class Fields
     public $type;
     public $rows;
     public $hideFromIndex;
+    public $slug;
+    public $notTranslatable;
+
+    public function notTranslatable()
+    {
+        $this->notTranslatable = 'disabled';
+        return $this;
+    }
+
+    public function slug()
+    {
+        $this->slug = true;
+        return $this;
+    }
 
     public function label($label)
     {

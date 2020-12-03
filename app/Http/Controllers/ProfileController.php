@@ -6,6 +6,7 @@ use App\Http\Requests\AnkaRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Helpers\Helper;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -19,7 +20,7 @@ class ProfileController extends Controller
 
         $data = User::where('id', auth()->id())->select('email', 'id')->first();
 
-        return view('admin.customEdit', compact('page', 'fields', 'data'));
+        return view('admin.edit-profile', compact('page', 'fields', 'data'));
     }
 
     public function update(AnkaRequest $request)
@@ -35,7 +36,7 @@ class ProfileController extends Controller
         if ($validator->fails())
             return back()->withInfo($validator->errors()->all());
 
-        $user = User::find($request->id);
+        $user = User::find(Auth::id());
 
         if ($request->password != null) {
                 $user->update([

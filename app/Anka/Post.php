@@ -27,7 +27,6 @@ class Post {
 
     public static $translatable = true;
 
-    public static $customController = false;
     public static $withoutTable = false;
     public static $hideFromSidebar = false;
 
@@ -37,7 +36,9 @@ class Post {
             Card::make([
                 Form::make([
                     Input::make('Başlık', 'title')
-                        ->placeholder('Lütfen başlık giriniz.'),
+                        ->placeholder('Lütfen başlık giriniz.')
+                        ->slug()
+                        ->notTranslatable(),
 
                     Tinymce::make('Açıklama', 'description')
                         ->rows('3')

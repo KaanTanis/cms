@@ -10,6 +10,7 @@ class Input extends Component
     public $name;
     public $placeholder;
     public $value;
+    public $disabled;
 
     /**
      * Create a new component instance.
@@ -18,13 +19,15 @@ class Input extends Component
      * @param $name
      * @param $placeholder
      * @param $value
+     * @param $disabled
      */
-    public function __construct($label, $name, $placeholder, $value)
+    public function __construct($label, $name, $placeholder, $value, $disabled = null)
     {
         $this->label = $label;
         $this->name = $name;
         $this->placeholder = $placeholder;
         $this->value = $value;
+        $this->disabled = $disabled;
     }
 
     /**
